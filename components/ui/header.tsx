@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
 import Image from "next/image";
-import logo from '@/public/assets/icons/logo.svg';
-import logoMobile from '@/public/assets/icons/logoMobile.svg';
+import logo from "@/public/assets/icons/logo.svg";
+import logoMobile from "@/public/assets/icons/logoMobile.svg";
 import { Button } from "./button";
 import { useTranslations } from "next-intl";
 import LanguageSelector from "./languageSelector";
@@ -10,7 +10,7 @@ import { useMediaQuery } from "@/hooks/use-media-query";
 import { useEffect, useState } from "react";
 
 const Header = () => {
-  const t = useTranslations('lp');
+  const t = useTranslations("lp");
 
   const isDesktopInitial = useMediaQuery("(min-width: 768px)");
   const [isDesktop, setIsDesktop] = useState(false);
@@ -32,9 +32,7 @@ const Header = () => {
         />
         <div className="flex gap-x-4 md:gap-x-10 items-center">
           <LanguageSelector />
-          <Button onClick={() => window.location.href = 'http://app.polkadot.education'}>
-            {t('sign-up')}
-          </Button>
+          <Button onClick={() => (window.location.href = "http://app.polkadot.education")}>{t("launch-app")}</Button>
         </div>
       </div>
     </div>
